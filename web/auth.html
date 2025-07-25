@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Auth Form</title>
+		<!-- Tailwind CSS CDN -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<style>
+			input {
+				line-height: normal;
+			}
+		</style>
+	</head>
+	<body
+		class="bg-blue-50 flex items-center justify-center min-h-screen font-sans"
+	>
+		<div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+			<h1
+				id="form-title"
+				class="text-2xl font-semibold mb-6 text-center text-gray-800"
+			>
+				Login
+			</h1>
+			<form id="auth-form" class="space-y-6" autocomplete="off">
+				<div>
+					<label for="username" class="block mb-1 text-gray-700 font-medium"
+						>Username</label
+					>
+					<input
+						id="username"
+						name="username"
+						type="text"
+						required
+						class="w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+						autocomplete="username"
+					/>
+				</div>
+
+				<div class="relative">
+					<label for="password" class="block mb-1 text-gray-700 font-medium"
+						>Password</label
+					>
+					<input
+						id="password"
+						name="password"
+						type="password"
+						required
+						class="w-full rounded-md border border-gray-300 px-3 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-400"
+						autocomplete="current-password"
+					/>
+					<div
+						id="show-password-area"
+						title="Нажмите и удерживайте, чтобы показать пароль"
+						class="absolute top-[calc(50%)] right-2 w-8 h-8 flex items-center justify-center cursor-pointer select-none"
+					>
+						<svg
+							id="eye-icon"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							class="w-5 h-5 text-gray-400 transition-colors duration-150"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+							/>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+							/>
+						</svg>
+					</div>
+				</div>
+
+				<div id="email-field" class="hidden">
+					<label for="email" class="block mb-1 text-gray-700 font-medium"
+						>Email</label
+					>
+					<input
+						id="email"
+						name="email"
+						type="email"
+						class="w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+						autocomplete="email"
+					/>
+				</div>
+
+				<button
+					id="submit-btn"
+					type="submit"
+					class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-md transition-colors duration-200"
+				>
+					Login
+				</button>
+			</form>
+
+			<p class="mt-6 text-center text-gray-600 text-sm">
+				<span id="toggle-text">Don't have an account?</span>
+				<button
+					id="toggle-link"
+					type="button"
+					class="text-blue-600 font-semibold hover:underline focus:outline-none ml-1"
+				>
+					Register
+				</button>
+			</p>
+		</div>
+
+		<script src="auth.js"></script>
+	</body>
+</html>

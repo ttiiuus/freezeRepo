@@ -1,0 +1,22 @@
+#just example
+server_config:
+  host: '192.168.209.1'
+  port: 8083
+
+database:
+  postgres:
+    server_db:
+      host: '192.168.209.151'
+      port: 5432
+    user: 'postgres'
+    password: 'postgres'
+    name: 'usersdb'
+  mongo:
+    host: '192.168.209.151'
+    port: 27017
+    user: 'mongo_user'
+    password: 'mongo_password'
+    name: 'reportsdb'
+
+auth:
+  jwt_secret: 'supersecretkey'
